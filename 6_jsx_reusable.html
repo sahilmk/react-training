@@ -1,0 +1,27 @@
+<body>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <div id="main"></div>
+
+    <script type="text/babel">
+        const mainDiv = document.getElementById('main');
+        const className = 'jsxclass';
+        const elementValue = 'Hello there, this is jsx';
+        const elementValueTwo = 'It is very easy to learn.';
+
+        const Reusefunc = (prop) => <h2 class={prop.class}> {prop.msg}</h2>
+        const SecondWay = prop => <span class={prop.class}>{prop.children}</span>
+
+        const element = <React.Fragment>
+            {Reusefunc({ class: className, msg: elementValue })}
+            {Reusefunc({ class: className, msg: elementValueTwo })}
+            <span>This is not Reusable code.</span>
+            <Reusefunc class={className} msg={elementValue}></Reusefunc>
+            <SecondWay class="secondwayclass">This is another way to reuse the element.</SecondWay>
+        </React.Fragment>
+
+        ReactDOM.render(element, mainDiv);
+    </script>
+</body>

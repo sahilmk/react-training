@@ -1,0 +1,30 @@
+<body>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="https://unpkg.com/prop-types@15.8.1/prop-types.js"></script>
+
+    <div id="main"></div>
+
+    <script type="text/babel">
+        const mainDiv = document.getElementById('main');
+        const className = 'jsxclass';
+        const elementValue = 'Hello there, this is jsx';
+        const elementValueTwo = 'It is very easy to learn.';
+
+        function Reusefunc({ valueOne, valueTwo }) {
+            return (
+                <h3>{valueOne} {valueTwo}</h3>
+            );
+        }
+
+        Reusefunc.propTypes = {
+            valueOne: PropTypes.string.isRequired,
+            valueTwo: PropTypes.string.isRequired
+        };
+
+        const element = <Reusefunc valueOne={elementValue} valueTwo={elementValueTwo}></Reusefunc>
+
+        ReactDOM.render(element, mainDiv);
+    </script>
+</body>
