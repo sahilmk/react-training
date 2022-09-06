@@ -1,0 +1,51 @@
+<head>
+    <style>
+        .box {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: red;
+        }
+
+        .small-box {
+            height: 100px;
+            width: 100px;
+        }
+
+        .medium-box {
+            height: 200px;
+            width: 200px;
+        }
+
+        .large-box {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <div id="main"></div>
+
+    <script type="text/babel">
+        const mainDiv = document.getElementById('main');
+        function Box({ size, ...rest }) {
+            return (
+                <div class={`box ${size}-box`} {...rest}></div >
+            );
+        }
+
+        const element = <div>
+            <Box size='small' style={{ backgroundColor: 'rgb(100,100,100)' }}>Small Box</Box>
+            <Box size='medium' style={{ backgroundColor: 'rgb(150,150,150)' }}>Medium Box</Box>
+            <Box size='large' style={{ backgroundColor: 'rgb(230,230,230)' }}>Large box</Box>
+        </div >
+
+        ReactDOM.render(element, mainDiv);
+    </script>
+</body>

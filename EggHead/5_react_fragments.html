@@ -1,0 +1,21 @@
+<body>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <div id="main"></div>
+
+    <script type="text/babel">
+        const mainDiv = document.getElementById('main');
+        const className = 'jsxclass';
+        const elementValue = 'Hello there, this is jsx';
+        const elementValueTwo = 'It is very easy to learn.';
+
+        const element = <React.Fragment>
+            <h1 class={className} children={elementValue} />
+            <h2 class={className}> {elementValueTwo}</h2>
+        </React.Fragment>
+
+        ReactDOM.render(element, mainDiv);
+    </script>
+</body>

@@ -1,0 +1,17 @@
+<body>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+
+    <div id="main"></div>
+
+    <script type="text/javascript">
+        const mainDiv = document.getElementById('main');
+
+        const reactElement = React.createElement('h3', {
+            children: 'Hello i am ReactJS',
+            className: 'reactClass'
+        })
+
+        ReactDOM.render(reactElement, mainDiv);
+    </script>
+</body>
