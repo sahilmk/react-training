@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.booklist {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.book {
+    background-color: white;
+    height: 350px;
+    width: 450px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.child {
+    color: red;
+}
+
+h3>a {
+    color: black;
+}
+
+p>a {
+    color: gray;
+}
+
+@media (max-width:756px) {
+    .booklist {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
