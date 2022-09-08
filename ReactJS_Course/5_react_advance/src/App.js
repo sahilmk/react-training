@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Display from './tutorial/3-conditional-rendering/setup/3-show-hide'
+import Display from './tutorial/6-useReducer/setup/index.js'
 
 function App() {
   return (
