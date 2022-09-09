@@ -1,15 +1,32 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/ReactJS_Course/learning/node_modules
-/ReactJS_Course/learning/.pnp
+/ReactJS_Course/1_Booklist_project/node_modules
+/ReactJS_Course/2_props/node_modules
+/ReactJS_Course/3_event/node_modules
+/ReactJS_Course/4_import_export/node_modules
+/ReactJS_Course/5_react_advance/node_modules
+
+/ReactJS_Course/1_Booklist_project/.pnp
+/ReactJS_Course/2_props/.pnp
+/ReactJS_Course/3_event/.pnp
+/ReactJS_Course/4_import_export/.pnp
+/ReactJS_Course/5_react_advance/.pnp
 .pnp.js
 
 # testing
-/ReactJS_Course/learning/coverage
+/ReactJS_Course/1_Booklist_project/coverage
+/ReactJS_Course/2_props/coverage
+/ReactJS_Course/3_event/coverage
+/ReactJS_Course/4_import_export/coverage
+/ReactJS_Course/5_react_advance/coverage
 
 # production
-/ReactJS_Course/learning/build
+/ReactJS_Course/1_Booklist_project/build
+/ReactJS_Course/2_props/build
+/ReactJS_Course/3_event/build
+/ReactJS_Course/4_import_export/build
+/ReactJS_Course/5_react_advance/build
 
 # misc
 .DS_Store
