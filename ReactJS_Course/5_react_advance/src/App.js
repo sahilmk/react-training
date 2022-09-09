@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Display from './tutorial/6-useReducer/setup/index.js'
+import Display from './tutorial/11-react-router/setup'
 
 function App() {
   return (
