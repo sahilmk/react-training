@@ -1,21 +1,23 @@
 import React from 'react'
 import TableData from './TableData'
+import { TableStyle } from './styled/main.styled'
 
-function Table() {
+function Table({ issue, setIssue }) {
     return (
         <>
-            <table>
+            <TableStyle border={"1"}>
                 <thead>
                     <tr>
                         <th></th>
                         <th>Issue</th>
+                        <th>Date</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <TableData />
+                    <TableData issue={issue} setIssue={setIssue} />
                 </tbody>
-            </table>
+            </TableStyle>
         </>
     )
 }
