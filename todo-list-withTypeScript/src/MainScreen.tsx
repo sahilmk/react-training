@@ -5,7 +5,7 @@ import { Screen } from './styled/main.styled'
 import { useEffect, useState } from 'react'
 import axios from 'axios';
 
-export interface DataTypes {
+export interface dataTypes {
     userId: number,
     id: number
     title: string,
@@ -14,7 +14,7 @@ export interface DataTypes {
 
 function MainScreen() {
     const url: string = 'https://jsonplaceholder.typicode.com/todos';
-    const [issue, setIssue] = useState<DataTypes[]>([]);
+    const [issue, setIssue] = useState<dataTypes[]>([]);
 
     useEffect(() => {
         axios.get(url).

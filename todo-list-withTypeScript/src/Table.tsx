@@ -1,15 +1,14 @@
 import React from 'react'
-import { FC } from 'react'
 import TableData from './TableData'
 import { TableStyle } from './styled/main.styled'
-import { DataTypes } from './MainScreen'
+import { dataTypes } from './MainScreen'
 
-interface TableProps {
-    issue: DataTypes[],
-    setIssue: (iteam: DataTypes[]) => void
+interface tableProps {
+    issue: dataTypes[],
+    setIssue: (iteam: dataTypes[]) => void
 }
 
-function Table({ issue, setIssue }: TableProps) {
+function Table({ issue, setIssue }: tableProps) {
     return (
         <>
             <TableStyle>

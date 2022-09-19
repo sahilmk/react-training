@@ -2,25 +2,25 @@ import React from 'react'
 import axios from 'axios';
 import { RowStyle } from './styled/main.styled'
 import Button from './Button';
-import { DataTypes } from './MainScreen';
+import { dataTypes } from './MainScreen';
 
-interface TableRowProps {
-    task: DataTypes,
-    issue: DataTypes[],
-    setIssue: (iteam: DataTypes[]) => void
+interface tableRowProps {
+    task: dataTypes,
+    issue: dataTypes[],
+    setIssue: (iteam: dataTypes[]) => void
 }
 
-function TableRow({ task, issue, setIssue }: TableRowProps) {
+function TableRow({ task, issue, setIssue }: tableRowProps) {
     const { id, title, completed } = task;
 
     const handleChanges = () => {
-        const newIssue = issue.map((obj: DataTypes) => {
+        const newIssue = issue.map((obj: dataTypes) => {
 
             if (obj.id === id) {
                 const updatedObject = { ...obj, completed: !completed };
 
                 axios.put(`https://jsonplaceholder.typicode.com/todos/${id}`, updatedObject)
-                    .then(res => console.log(res))
+                    .then()
 
                 return updatedObject;
             }

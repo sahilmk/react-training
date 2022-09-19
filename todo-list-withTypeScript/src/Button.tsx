@@ -1,18 +1,18 @@
 import React from 'react'
-import { DataTypes } from './MainScreen';
+import { dataTypes } from './MainScreen';
 
-interface ButtonProps {
-    direction: string,
+interface buttonProps {
+    direction: 'up' | 'down',
     hidden: boolean,
-    issue: DataTypes[],
-    setIssue: (iteam: DataTypes[]) => void
+    issue: dataTypes[],
+    setIssue: (iteam: dataTypes[]) => void
     id: number
 }
 
-function Button({ direction, hidden, issue, setIssue, id }: ButtonProps) {
+function Button({ direction, hidden, issue, setIssue, id }: buttonProps) {
 
     const handleClick = () => {
-        const newIssue = issue.map((obj: DataTypes) => {
+        const newIssue = issue.map((obj: dataTypes) => {
             if (direction === 'down') {
                 if (obj.id === id) {
                     return { ...obj, id: (id + 1) };
@@ -33,7 +33,7 @@ function Button({ direction, hidden, issue, setIssue, id }: ButtonProps) {
             }
         })
 
-        newIssue.sort((a: DataTypes, b: DataTypes) => a.id - b.id);
+        newIssue.sort((a: dataTypes, b: dataTypes) => a.id - b.id);
         setIssue(newIssue);
     }
 

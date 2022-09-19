@@ -2,19 +2,19 @@ import React, { useRef, useState, useEffect } from 'react'
 import './scss/title.scss'
 import axios from 'axios';
 import { Form, Field } from 'react-final-form'
-import { DataTypes } from './MainScreen'
+import { dataTypes } from './MainScreen'
 
-interface FieldValue {
+interface fieldValue {
     tasktype: string,
     taskname: string
 }
 
-interface HeaderProps {
-    issue: DataTypes[],
-    setIssue: (iteam: DataTypes[]) => void
+interface headerProps {
+    issue: dataTypes[],
+    setIssue: (iteam: dataTypes[]) => void
 }
 
-function Header({ issue, setIssue }: HeaderProps) {
+function Header({ issue, setIssue }: headerProps) {
     const [showButton, setShowButton] = useState(true);
     const [task, setTask] = useState(false);
 
@@ -28,7 +28,7 @@ function Header({ issue, setIssue }: HeaderProps) {
         setTask(!task);
     }
 
-    const onSubmit = (values: FieldValue) => {
+    const onSubmit = (values: fieldValue) => {
         const newTask = {
             "userId": 1,
             "id": issue.length + 1,
@@ -39,7 +39,7 @@ function Header({ issue, setIssue }: HeaderProps) {
         const newIssue = [...issue, newTask];
         setIssue([...issue, newTask]);
         axios.post(`https://jsonplaceholder.typicode.com/todos`, newIssue)
-            .then(response => console.log(response));
+            .then();
 
         setShowButton(!showButton);
         setTask(!task);

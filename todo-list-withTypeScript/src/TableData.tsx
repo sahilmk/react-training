@@ -1,17 +1,17 @@
 import TableRow from './TableRow';
-import { DataTypes } from './MainScreen';
+import { dataTypes } from './MainScreen';
 
-interface TableDataProps {
-    issue: DataTypes[],
-    setIssue: (iteam: DataTypes[]) => void
+interface tableDataProps {
+    issue: dataTypes[],
+    setIssue: (iteam: dataTypes[]) => void
 }
 
-function TableData({ issue, setIssue }: TableDataProps) {
+function TableData({ issue, setIssue }: tableDataProps) {
 
     return (
         <>
             {
-                issue.map((task: DataTypes) => {
+                issue.map((task: dataTypes) => {
                     return (
                         <TableRow key={task.id} task={task} issue={issue} setIssue={setIssue} />
                     )
