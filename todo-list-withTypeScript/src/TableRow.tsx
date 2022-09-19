@@ -2,12 +2,19 @@ import React from 'react'
 import axios from 'axios';
 import { RowStyle } from './styled/main.styled'
 import Button from './Button';
+import { DataTypes } from './MainScreen';
 
-function TableRow({ task, issue, setIssue }) {
+interface TableRowProps {
+    task: DataTypes,
+    issue: DataTypes[],
+    setIssue: (iteam: DataTypes[]) => void
+}
+
+function TableRow({ task, issue, setIssue }: TableRowProps) {
     const { id, title, completed } = task;
 
     const handleChanges = () => {
-        const newIssue = issue.map((obj) => {
+        const newIssue = issue.map((obj: DataTypes) => {
 
             if (obj.id === id) {
                 const updatedObject = { ...obj, completed: !completed };
