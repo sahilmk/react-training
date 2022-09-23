@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { todoPromise } from './APIs';
-import { Table } from './components';
-import Header from './components/Header';
+import { Table, Header } from './components';
 import { dataTypes } from './Models';
 
 function App() {
