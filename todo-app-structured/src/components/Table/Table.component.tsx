@@ -1,8 +1,7 @@
 import React from 'react'
 import TableData from '../TableData'
-import { dataTypes } from '../../Models'
-import '../Table/Table.module.scss'
 import { stateType } from '../../Models'
+import '../Table/Table.module.scss'
 
 function Table({ issue, setIssue }: stateType) {
     return (

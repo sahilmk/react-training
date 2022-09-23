@@ -1,7 +1,6 @@
 import React from 'react'
 import { DownwardArrow, UpwardArrow } from '../../Icons'
-import { dataTypes } from '../../Models'
-import { buttonProps } from '../../Models'
+import { dataTypes, buttonProps } from '../../Models'
 
 function Button({ direction, hidden, issue, setIssue, id }: buttonProps) {
 

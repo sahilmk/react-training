@@ -1,11 +1,8 @@
 import React from 'react'
-import axios from 'axios';
 import Button from '../Button';
-import { dataTypes } from '../../Models'
-import { putMethod } from '../../Util/APIManager';
-import { todoDataEndPoint } from '../../Util'
+import { todoDataEndPoint, putMethod } from '../../Util'
+import { dataTypes, tableRowProps } from '../../Models'
 import '../TableRow/TableRow.module.scss'
-import { tableRowProps } from '../../Models';
 
 function TableRow({ task, issue, setIssue }: tableRowProps) {
     const { id, title, completed } = task;

@@ -1,6 +1,5 @@
 import TableRow from '../TableRow';
-import { dataTypes } from '../../Models';
-import { stateType } from '../../Models';
+import { dataTypes, stateType } from '../../Models';
 
 function TableData({ issue, setIssue }: stateType) {
 
