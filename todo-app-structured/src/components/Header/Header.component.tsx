@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Form, Field } from 'react-final-form'
-import { headerProps, fieldValue } from '../../Models'
+import { stateType, fieldValue } from '../../Models'
 import { postMethod, todoDataEndPoint, validate } from '../../Util';
 import * as styles from './Header.module.scss';
 
-function Header({ issue, setIssue }: headerProps) {
+function Header({ issue, setIssue }: stateType) {
     const [showButton, setShowButton] = useState(true);
     const [task, setTask] = useState(false);
 

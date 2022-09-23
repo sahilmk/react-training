@@ -10,7 +10,21 @@ export type fieldValue = {
     taskname: string
 }
 
-export type headerProps = {
+export type stateType = {
     issue: dataTypes[],
     setIssue: (iteam: dataTypes[]) => void
+}
+
+export type tableRowProps = {
+    task: dataTypes,
+    issue: dataTypes[],
+    setIssue: (iteam: dataTypes[]) => void
+}
+
+export type buttonProps = {
+    direction: 'Up' | 'Down',
+    hidden: boolean,
+    issue: dataTypes[],
+    setIssue: (iteam: dataTypes[]) => void
+    id: number
 }

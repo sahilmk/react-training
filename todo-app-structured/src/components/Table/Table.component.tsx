@@ -2,13 +2,9 @@ import React from 'react'
 import TableData from '../TableData'
 import { dataTypes } from '../../Models'
 import '../Table/Table.module.scss'
+import { stateType } from '../../Models'
 
-interface tableProps {
-    issue: dataTypes[],
-    setIssue: (iteam: dataTypes[]) => void
-}
-
-function Table({ issue, setIssue }: tableProps) {
+function Table({ issue, setIssue }: stateType) {
     return (
         <>
             <table>

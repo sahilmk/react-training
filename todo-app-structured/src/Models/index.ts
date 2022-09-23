@@ -1,3 +1,3 @@
-import { dataTypes, fieldValue, headerProps } from "./Modeltypes";
+import { dataTypes, fieldValue, stateType, tableRowProps, buttonProps } from "./Modeltypes";
 
-export type { dataTypes, fieldValue, headerProps };
+export type { dataTypes, fieldValue, stateType, tableRowProps, buttonProps };

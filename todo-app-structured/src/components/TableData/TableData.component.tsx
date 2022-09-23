@@ -1,12 +1,8 @@
 import TableRow from '../TableRow';
 import { dataTypes } from '../../Models';
+import { stateType } from '../../Models';
 
-interface tableDataProps {
-    issue: dataTypes[],
-    setIssue: (iteam: dataTypes[]) => void
-}
-
-function TableData({ issue, setIssue }: tableDataProps) {
+function TableData({ issue, setIssue }: stateType) {
 
     return (
         <>

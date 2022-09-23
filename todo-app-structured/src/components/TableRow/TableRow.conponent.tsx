@@ -5,12 +5,7 @@ import { dataTypes } from '../../Models'
 import { putMethod } from '../../Util/APIManager';
 import { todoDataEndPoint } from '../../Util'
 import '../TableRow/TableRow.module.scss'
-
-interface tableRowProps {
-    task: dataTypes,
-    issue: dataTypes[],
-    setIssue: (iteam: dataTypes[]) => void
-}
+import { tableRowProps } from '../../Models';
 
 function TableRow({ task, issue, setIssue }: tableRowProps) {
     const { id, title, completed } = task;

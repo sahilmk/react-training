@@ -1,14 +1,7 @@
 import React from 'react'
 import { DownwardArrow, UpwardArrow } from '../../Icons'
 import { dataTypes } from '../../Models'
-
-interface buttonProps {
-    direction: 'Up' | 'Down',
-    hidden: boolean,
-    issue: dataTypes[],
-    setIssue: (iteam: dataTypes[]) => void
-    id: number
-}
+import { buttonProps } from '../../Models'
 
 function Button({ direction, hidden, issue, setIssue, id }: buttonProps) {
 
