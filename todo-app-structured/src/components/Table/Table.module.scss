@@ -1,0 +1,27 @@
+table {
+    @font-face {
+        font-family: heebofont;
+        src: url('../../../public/Locales/heebo.regular.ttf');
+    }
+
+    border: 1px solid #CFD2D4;
+    border-collapse: collapse;
+    width: calc(100% - 250px);
+    margin-left: 170px;
+    /* border-radius: 10px; */
+
+
+    thead {
+        height: 60px;
+        background-color: #CFD2D4;
+    }
+
+    th {
+        font-family: heebofont;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            text-align: left;
+        }
+    }
+}

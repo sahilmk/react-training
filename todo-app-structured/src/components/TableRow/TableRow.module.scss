@@ -1,0 +1,34 @@
+tr {
+    @font-face {
+        font-family: heebofont;
+        src: url('../../../public/Locales/heebo.regular.ttf');
+    }
+
+    td {
+        border-bottom: 1px solid #C7CBCD;
+        font-family: heebofont;
+        color: #121E2A;
+        font-weight: bold;
+        padding: 20px 0px;
+
+
+        &:first-child,
+        &:last-child {
+            text-align: center;
+        }
+    }
+
+
+
+    button {
+        border: none;
+        margin-right: 5px;
+        padding: 10px 20px;
+        border-radius: 2px;
+    }
+
+    input {
+        height: 24px;
+        width: 24px;
+    }
+}

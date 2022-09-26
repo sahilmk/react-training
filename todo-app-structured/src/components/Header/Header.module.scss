@@ -1,0 +1,68 @@
+@font-face {
+    font-family: heebofont;
+    src: url('../../../public/Locales/heebo.regular.ttf');
+}
+
+.title {
+    font-family: heebofont;
+    display: flex;
+    justify-content: space-between;
+    // height: 50px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    select {
+        border: 2px solid #C7CBCD;
+        background-color: #fff;
+        outline: none;
+        font-size: 17px;
+        padding: 12px 120px 12px 30px;
+    }
+
+    label {
+        font-family: heebofont;
+        font-size: medium;
+        font-weight: bold;
+        color: #121E2A;
+    }
+
+}
+
+.inputs {
+    display: flex;
+    margin-bottom: 14px;
+
+    >div {
+        margin-right: 20px;
+    }
+}
+
+.btn {
+    align-self: center;
+    border: none;
+    background-color: #4E7CF8;
+    color: white;
+    padding: 15px 30px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.btnInput {
+    align-self: flex-end;
+}
+
+.error {
+    color: red;
+    font-family: heebofont;
+    font-size: medium;
+    font-size: 18px;
+}
+
+.screen {
+    width: calc(100% - 250px);
+    margin-left: 170px;
+}
